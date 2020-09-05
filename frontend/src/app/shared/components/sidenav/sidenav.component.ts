@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { MenuItem } from '../../models/MenuItem.model';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,6 +9,19 @@ import { MatDrawer } from '@angular/material/sidenav';
 })
 export class SidenavComponent implements OnInit {
   @ViewChild('drawer') drawer: MatDrawer;
+
+  items: MenuItem[] = [
+    {
+      label: 'dashboard',
+      icon: 'home',
+      url: 'dashboard',
+    },
+    {
+      label: 'projetos',
+      icon: 'assignment',
+      url: 'projects',
+    },
+  ];
 
   constructor() {}
 

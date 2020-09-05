@@ -1,2 +1,4 @@
-<app-toolbar></app-toolbar>
-<app-sidenav></app-sidenav>
+<app-toolbar (toggleMenu)="sidenav.toggleDrawer()"></app-toolbar>
+<app-sidenav #sidenav>
+  <router-outlet></router-outlet>
+</app-sidenav>
