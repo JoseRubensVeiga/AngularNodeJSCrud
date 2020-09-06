@@ -2,7 +2,7 @@
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <h1>
       <mat-icon>assignment</mat-icon>
-      Novo Projeto
+      {{ isEdition ? "Editar" : "Novo" }} Projeto
     </h1>
     <app-input-field
       class="w-100"
