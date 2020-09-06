@@ -8,16 +8,7 @@ routes.use(cors());
 
 let lastId = 1;
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'd1231',
-    text: 'dasdas',
-    budget: 10,
-    initialDate: 'dasdas',
-    finalDate: 'dsadas',
-  },
-];
+const projects: Project[] = [];
 
 routes.get('/projects', (req, res) => {
   res.json({ projects });
