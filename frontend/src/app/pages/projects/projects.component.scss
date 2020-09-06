@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  .container-centered {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .btn-container {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

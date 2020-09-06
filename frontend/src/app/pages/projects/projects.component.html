@@ -1,1 +1,16 @@
-<p>projects works!</p>
+<div class="container">
+  <div class="container-centered">
+    <div class="btn-container">
+      <a mat-raised-button color="primary" routerLink="new">
+        Criar novo
+        <mat-icon>add</mat-icon>
+      </a>
+    </div>
+    <div class="projects-container">
+      <app-project-single
+        *ngFor="let project of projects"
+        [project]="project"
+      ></app-project-single>
+    </div>
+  </div>
+</div>
