@@ -1,0 +1,56 @@
+<div class="container">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <h1>
+      <mat-icon>assignment</mat-icon>
+      Novo Projeto
+    </h1>
+    <app-input-field
+      class="w-100"
+      label="Título"
+      formControlName="title"
+    ></app-input-field>
+    <div class="row">
+      <app-text-area-field
+        class="col"
+        label="Descrição"
+        rows="5"
+        type="number"
+        formControlName="text"
+      ></app-text-area-field>
+      <app-input-field
+        class="col"
+        label="Orçamento"
+        type="number"
+        formControlName="budget"
+      ></app-input-field>
+    </div>
+    <div class="row">
+      <app-input-date
+        class="col"
+        label="Data Inicial"
+        type="number"
+        formControlName="initialDate"
+      ></app-input-date>
+      <app-input-date
+        class="col"
+        label="Data Final"
+        type="number"
+        formControlName="finalDate"
+      ></app-input-date>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <a
+        class="px-5"
+        type="submit"
+        mat-stroked-button
+        color="warn"
+        routerLink="../"
+      >
+        Cancelar
+      </a>
+      <button class="px-5" type="submit" mat-raised-button color="primary">
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>
