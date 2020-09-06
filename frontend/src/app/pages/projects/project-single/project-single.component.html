@@ -1,20 +1,14 @@
-<mat-card class="card">
+<mat-card class="m-2">
   <mat-card-header>
     <mat-card-title>{{ project.title }}</mat-card-title>
     <mat-card-subtitle>José Veiga</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
-    {{ project.text }}
+    {{ project.text | cutText }}
   </mat-card-content>
   <mat-card-actions>
-    <button
-      mat-stroked-button
-      color="primary"
-      [swal]="['Oops!', 'isso ainda não foi implementado =(', 'error']"
-    >
-      Editar
-    </button>
+    <a mat-stroked-button color="primary" [routerLink]="project.id"> Editar </a>
     <button mat-stroked-button color="warn" (click)="deleteProject()">
       Excluir
     </button>

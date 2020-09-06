@@ -7,6 +7,7 @@ import { ProjectFormComponent } from './project-form';
 const routes: Routes = [
   { path: '', component: ProjectsComponent },
   { path: 'new', component: ProjectFormComponent },
+  { path: ':id', component: ProjectFormComponent },
 ];
 
 @NgModule({

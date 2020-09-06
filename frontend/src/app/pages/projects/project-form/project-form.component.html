@@ -29,12 +29,14 @@
         class="col"
         label="Data Inicial"
         type="number"
+        [minDate]="today"
         formControlName="initialDate"
       ></app-input-date>
       <app-input-date
         class="col"
         label="Data Final"
         type="number"
+        [minDate]="today"
         formControlName="finalDate"
       ></app-input-date>
     </div>

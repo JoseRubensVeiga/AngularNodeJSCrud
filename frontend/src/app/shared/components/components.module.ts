@@ -17,7 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { TextAreaFieldComponent } from './text-area-field/text-area-field.component';
 import { InputDateComponent } from './input-date/input-date.component';
 
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -50,5 +50,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     TextAreaFieldComponent,
     InputDateComponent,
   ],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })
 export class ComponentsModule {}

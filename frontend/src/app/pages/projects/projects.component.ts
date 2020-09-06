@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { Project } from 'src/app/shared/models/Project.model';
 import { ProjectsService } from './projects.service';
@@ -11,11 +11,21 @@ import { ProjectsService } from './projects.service';
 export class ProjectsComponent implements OnInit {
   projects: Project[];
 
-  constructor(private projectsService: ProjectsService) {}
+  constructor(
+    private projectsService: ProjectsService,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.projectsService.getProjects().subscribe((response) => {
       this.projects = response.projects;
     });
+  }
+
+  onDeleted(project: Project): void {
+    const projectIndex = this.projects.findIndex((p) => p === project);
+
+    this.projects.splice(projectIndex, 1);
+    this.cd.detectChanges();
   }
 }

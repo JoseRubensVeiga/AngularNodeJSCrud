@@ -1,15 +1,18 @@
 <div class="container">
   <div class="container-centered">
-    <div class="btn-container">
-      <a mat-raised-button color="primary" routerLink="new">
-        Criar novo
-        <mat-icon>add</mat-icon>
+    <div class="d-flex flex-row-reverse">
+      <a mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
       </a>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="new">Criar Novo</a>
+      </mat-menu>
     </div>
     <div class="projects-container">
       <app-project-single
         *ngFor="let project of projects"
         [project]="project"
+        (deleted)="onDeleted($event)"
       ></app-project-single>
     </div>
   </div>

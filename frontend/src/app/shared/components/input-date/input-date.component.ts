@@ -18,6 +18,8 @@ export class InputDateComponent
   @Input() label: string;
   @Input() placeholder: string;
   @Input() type = 'text';
+  @Input() minDate: Date;
+  @Input() maxDate: Date;
 
   control = new FormControl();
 

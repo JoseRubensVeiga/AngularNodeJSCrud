@@ -29,4 +29,12 @@ app-text-area-field {
 
 a {
   text-decoration: none !important;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+button:focus {
+  outline: none !important;
 }
