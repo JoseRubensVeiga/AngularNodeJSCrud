@@ -21,3 +21,12 @@ app-toolbar {
 mat-drawer-container {
   height: calc(100vh - 60px);
 }
+
+app-input-field,
+app-text-area-field {
+  display: block;
+}
+
+a {
+  text-decoration: none !important;
+}
